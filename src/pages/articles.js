@@ -15,6 +15,7 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRef } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
+import { LinkArrow } from "@/components/Icons";
 
 const FramerImage = motion(Image);
 
@@ -145,21 +146,18 @@ export default function Articles() {
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={blog1}
-              title="build a custom pagination component in reactjs from scratch"
-              time="9 min read"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this 
-              step-by-step guide to integrate Pagination component in your ReactJS project."
-              link="https://devdreaming.com/blogs/create-pagination-component-reactjs"
+              title="Ek Kahani"
+              time={"April 26, 2023"}
+              summary=""
+              link=""
             />
 
             <FeaturedArticle
               img={blog2}
-              title="creating stunning loading screens in react: Build 3 types of loading screens"
-              time="10 min read"
-              summary="Learn how to create stunning loading screens in React with 3 different methods. 
-              Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the 
-              user experience."
-              link="https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react"
+              title="Banjara"
+              time={"December 2, 2022"}
+              summary=""
+              link=""
             />
           </ul>
 

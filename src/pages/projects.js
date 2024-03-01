@@ -163,7 +163,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
+        <title>Porjects|Swapnil_Keshari</title>
         <meta
           name="description"
           content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 

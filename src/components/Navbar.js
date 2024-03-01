@@ -57,8 +57,6 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   );
 };
 
-
-
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
     const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +100,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mr-3"
-          href="#"
+          href="https://twitter.com/SwapnilKeshari7"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my twitter profile"
@@ -112,7 +110,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="#"
+          href="https://github.com/swapnilkeshari"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my github profile"
@@ -122,7 +120,7 @@ const Navbar = () => {
         <motion.a
           target={"_blank"}
           className="w-6 mx-3"
-          href="#"
+          href="https://www.linkedin.com/in/swapnilkeshari23/"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my linkedin profile"

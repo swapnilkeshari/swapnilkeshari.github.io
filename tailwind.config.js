@@ -13,8 +13,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        //mont: ["var(--font-mont)", ...fontFamily.sans],
-        roboto: ['Roboto', 'sans-serif'],
+        mont: ["var(--font-mont)", ...fontFamily.sans],
+        // roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
         dark: "#1b1b1b",

@@ -146,7 +146,7 @@ export default function Articles() {
               title="Ek Kahani"
               time={"April 26, 2023"}
               summary=""
-              link={"./ek_kahani.js"}
+              link={"../components/ek_kahani.js"}
             />
 
             <FeaturedArticle

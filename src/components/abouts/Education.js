@@ -47,19 +47,19 @@ const Education = () => {
             type="Doctor of Philosophy in Computational Biology"
             time="2021-Present"
             place="University of Pittsburgh , Pittsburgh"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
+            info="ML, AI, Data Science, Computational Biology and Immunology."
           />
           <Details
-            type="Bachelor of Technology in Chemical Engineering"
+            type="Bachelor of Technology in Chemical Engineering with Minor in Biology"
             time="2017-2021"
             place="Indian Institute of Technology, Bombay"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+            info="Chemical Engineering, Biology, National Service Scheme, Swimming and Dramatics."
           />
           <Details
             type="Schooling"
             time="2002-2016"
             place="Campion School, Bhopal"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering."
+            info="From where it all began."
           />
         </ul>
       </div>

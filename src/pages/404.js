@@ -9,12 +9,10 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>Awesome Portfolio Built with Nextjs | 404 Page </title>
+        <title>Swapnil Keshari' Website | 404 Page </title>
         <meta
           name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+          content=""
         />
       </Head>
       <TransitionEffect />
@@ -22,8 +20,8 @@ const NotFound = () => {
         <Layout className="relative !bg-transparent !pt-16 flex flex-col items-center justify-center">
           <AnimatedText text="404" className=" " />
           <AnimatedText
-            text="Page Not Found."
-            className=" !text-7xl "
+            text="Oops! Looks like you took a wrong turn on the internet. 🚧. Don't worry, it happens to the best of us. Maybe try going back home before the search party arrives? 🧭"
+            className=" !text-xl "
           />
           <Link
             href="/"
@@ -32,7 +30,7 @@ const NotFound = () => {
         dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
         "
           >
-            Go To Home
+            Take Me Home 🏡
           </Link>
         </Layout>
       </main>

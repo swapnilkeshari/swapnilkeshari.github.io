@@ -49,9 +49,9 @@ export default function Home() {
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
               Designer by <span className="text-primary text-2xl px-1 dark:text-primaryDark">&#9825;	</span> 
               <br></br>
-              Engineer and Scientist by mind
+              Engineer and Scientist by mind 🧬
               <br></br>
-              Wanderer by soul
+              Wanderer by soul 🛫
               </p>
               <div className="mt-2 flex items-center self-center lg:self-center">
                 <Link

@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>Swapnil Keshari' Website | 404 Page </title>
+        <title>Swapnil Keshari Website | 404 Page </title>
         <meta
           name="description"
           content=""

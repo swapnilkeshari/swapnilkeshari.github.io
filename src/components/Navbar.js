@@ -9,7 +9,7 @@ import {
   MoonIcon,
   PinterestIcon,
   SunIcon,
-  TwitterIcon,
+  XIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
@@ -65,8 +65,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-
-
   return (
     <header className="w-full flex items-center justify-between px-32 py-8 font-medium z-10 dark:text-light
     lg:px-16 relative z-1 md:px-12 sm:px-8
@@ -90,8 +88,8 @@ const Navbar = () => {
       <nav className="flex items-center justify-center">
         <CustomLink className="mr-4" href="/" title="Home" />
         <CustomLink className="mx-4" href="/about" title="About" />
-        <CustomLink className="mx-4" href="/projects" title="Projects" />
-        <CustomLink className="ml-4" href="/articles" title="Articles" />
+        {/* <CustomLink className="mx-4" href="/projects" title="Projects" /> */}
+        <CustomLink className="ml-4" href="/poems" title="Poems" />
       </nav>
       <nav
         className="flex items-center justify-center flex-wrap lg:mt-2
@@ -103,9 +101,9 @@ const Navbar = () => {
           href="https://twitter.com/SwapnilKeshari7"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Checkout my twitter profile"
+          aria-label="Checkout my X profile"
         >
-          <TwitterIcon />
+          <XIcon />
         </motion.a>
         <motion.a
           target={"_blank"}
@@ -155,7 +153,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-center flex-col">
         <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="Home" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="About" />
-        <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/projects" title="Projects" />
+        {/* <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/projects" title="Projects" /> */}
         <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Articles" />
       </nav>
       <nav
@@ -170,7 +168,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.9 }}
           aria-label="Checkout my twitter profile"
         >
-          <TwitterIcon />
+          <XIcon />
         </motion.a>
         <motion.a
           target={"_blank"}

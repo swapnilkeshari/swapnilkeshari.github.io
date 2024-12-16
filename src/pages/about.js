@@ -1,12 +1,12 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/developer-pic-2.jpg";
+import profile from "../../public/images/profile/Swapnil_Keshari.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
+import Skills from "@/components/abouts/Skills";
+import Experience from "@/components/abouts/Experience";
+import Education from "@/components/abouts/Education";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -59,25 +59,25 @@ export default function About() {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 BIOGRAPHY
               </h2>
-              <p className="font-medium ">
-                Hi, I&apos;m <strong>CodeBucks</strong>, a web developer and
-                UI/UX designer with a passion for creating beautiful,
-                functional, and user-centered digital experiences. With 4 years
-                of experience in the field. I am always looking for new and
-                innovative ways to bring my clients&apos; visions to life.
+              <p className="font-medium">
+                Hi, I&apos;m <strong>Swapnil Keshari</strong>, a Ph.D. candidate in Computational Biology at 
+                the CMU-UPitt Joint Program, with a passion for solving complex problems through cutting-edge 
+                technologies. With a solid foundation in machine learning, graph modeling, and data science, 
+                I strive to create scalable and impactful solutions for research and industry challenges.
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.
+                I believe innovation is not just about pushing boundaries but also about making solutions 
+                practical and accessible. Whether it&apos;s developing tools like DISCo-Net for large-scale 
+                co-authorship network analysis or analyzing high-dimensional biological data, my work is 
+                driven by curiosity and a desire to make meaningful contributions.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                Beyond academics, I&apos;m an active leader and mentor, having organized initiatives for 
+                student advocacy and alumni networks. My diverse interests include digital design, poetry, 
+                aviation, and cricket, which keep me balanced and creatively inspired. I look forward to 
+                applying my skills, experiences, and passion to transformative projects that make a difference.
               </p>
+
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
             bg-light p-8 dark:border-light dark:bg-dark
@@ -91,7 +91,7 @@ export default function About() {
               <Image
                 className="h-auto w-full rounded-2xl"
                 src={profile}
-                alt="Codebucks"
+                alt="Swapnil_Keshari_Profile_Picture"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
@@ -100,26 +100,6 @@ export default function About() {
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
             xl:items-center md:order-3">
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={40} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={50} />+
-                </span>
-                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
-                xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  projects completed
-                </h2>
-              </div>
-
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumberFramerMotion value={4} />+

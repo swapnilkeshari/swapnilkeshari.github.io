@@ -30,7 +30,7 @@ const NotFound = () => {
         dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
         "
           >
-            Take Me Home 🏡
+            Take Me Home
           </Link>
         </Layout>
       </main>

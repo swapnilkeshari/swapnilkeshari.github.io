@@ -20,7 +20,7 @@ const NotFound = () => {
         <Layout className="relative !bg-transparent !pt-16 flex flex-col items-center justify-center">
           <AnimatedText text="404" className=" " />
           <AnimatedText
-            text="Oops! Looks like you took a wrong turn on the internet. Don't worry, it happens to the best of us. Maybe try going back home before the search party arrives?"
+            text="Oops! Looks like you took a wrong turn on the internet 🚧. Don't worry, it happens to the best of us. Maybe try going back home before the search party arrives?🧭"
             className=" !text-xl "
           />
           <Link
@@ -30,7 +30,7 @@ const NotFound = () => {
         dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
         "
           >
-            Take Me Home
+            Take Me Home 🏡
           </Link>
         </Layout>
       </main>

@@ -244,7 +244,7 @@ export default function Articles() {
       >
         <Layout className="pt-16">
           <TypingText 
-          text="Since pen is mightier than the sword...😀"  
+          text="Since pen is mightier than the sword...🖋️"  
           className="`inline-block text-dark dark:text-light text-6xl w-full  ${className} xl:text-6xl`"
           repeat={false}
           delay = {120}

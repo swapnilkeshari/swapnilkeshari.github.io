@@ -7,7 +7,6 @@ import Link from "next/link";
 import profilePic from "../../public/images/profile/Swapnil_Keshari.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 
-
 export default function Home() {
   
   return (
@@ -19,7 +18,7 @@ export default function Home() {
           content="Immerse in the story of my life"
         />
       </Head>
-
+      
       <TransitionEffect />
       <article
         className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
@@ -37,6 +36,7 @@ export default function Home() {
                 priority
               />
             </div>
+          
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
                 text="A Dream"
@@ -69,7 +69,6 @@ export default function Home() {
                 >
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
-
                 <Link
                   href="mailto:98keshari@gmail.com"
                   className="ml-4 text-lg font-medium capitalize text-dark underline 

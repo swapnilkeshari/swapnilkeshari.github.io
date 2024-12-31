@@ -1,0 +1,8 @@
+.first_name path,
+.last_name path {
+  stroke: #000; /* Black stroke */
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round; /* Smooth line edges */
+  stroke-linejoin: round;
+}

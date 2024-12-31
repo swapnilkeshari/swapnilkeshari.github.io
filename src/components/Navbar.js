@@ -11,8 +11,8 @@ import {
 } from "./Icons";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
-import LineAnimation from "@/components/signature";
-import SquiggleAnimation from '@/components/new_path';
+import { SignAnimation } from "@/components/SignAnimation";
+import SquiggleAnimation from '@/components/SquiggleAnimation';
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -83,18 +83,15 @@ const Navbar = () => {
         <span className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
       </button>
 
-      <div className="w-full flex justify-between items-center lg:hidden"
-      >
-      <nav className="flex items-center justify-center">
-        <CustomLink className="mr-4" href="/" title="Home" />
-        <CustomLink className="mx-4" href="/about" title="About" />
-        {/* <CustomLink className="mx-4" href="/projects" title="Projects" /> */}
-        <CustomLink className="ml-4" href="/poems" title="Poems" />
-      </nav>
-      <nav
-        className="flex items-center justify-center flex-wrap lg:mt-2
-      "
-      >
+      <div className="w-full flex justify-between items-center lg:hidden">
+        <nav className="flex items-center justify-center">
+          <CustomLink className="mr-4" href="/" title="Home" />
+          <CustomLink className="mx-4" href="/about" title="About" />
+          {/* <CustomLink className="mx-4" href="/projects" title="Projects" /> */}
+          <CustomLink className="ml-4" href="/poems" title="Poems" />
+        </nav>
+        <nav className="flex items-center justify-center flex-wrap lg:mt-2">
+
         <motion.a
           target={"_blank"}
           className="w-6 mr-3"
@@ -157,8 +154,7 @@ const Navbar = () => {
         <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/poems" title="Poems" />
       </nav>
       <nav
-        className="flex items-center justify-center  mt-2
-      "
+        className="flex items-center justify-center  mt-2"
       >
         <motion.a
           target={"_blank"}
@@ -210,11 +206,9 @@ const Navbar = () => {
       : null
     }
 
-      <div className="absolute left-[50%] top-2 translate-x-[0%] ">
-        {/* <Logo /> */}
-        {/*<LineAnimation />*/}
-        <SquiggleAnimation />
-
+      <div className="absolute left-[50%] top-2 translate-x-[0%]">
+        <SignAnimation/>
+        {/* <SquiggleAnimation /> */}
       </div>
     </header>
   );

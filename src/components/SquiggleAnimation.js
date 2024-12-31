@@ -1,9 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="560px" height="288px" viewBox="0 0 560 288" style="enable-background:new 0 0 560 288;" xml:space="preserve">
+import { delay } from 'framer-motion';
+import React, { useEffect } from 'react';
+// import './SquiggleAnimation.css'; // Import the CSS file for styling
 
-		<path d="M88.13,81.07c-1.33-3.44-3.5-6.4-6.86-8.07c-1.7-0.85-3.74-1.51-5.66-1.57c-2.03-0.06-3.95,0.68-5.7,1.64
+const SquiggleAnimation = ({ className, ...rest }) => {
+  useEffect(() => {
+    const animatePath = (selector,delay = 0) => {
+      const element = document.querySelector(selector);
+      const length = element.getTotalLength();
+      element.style.transition = element.style.WebkitTransition = 'none';
+      element.style.strokeDasharray = `${length} ${length}`;
+      element.style.strokeDashoffset = length;
+      element.getBoundingClientRect(); // Trigger reflow
+      setTimeout(() => {
+        element.style.transition = element.style.WebkitTransition = 'stroke-dashoffset 10s ease-in-out';
+        element.style.strokeDashoffset = '0';
+      }, delay);
+      // element.style.transition = element.style.WebkitTransition = 'stroke-dashoffset 10s ease-in-out';
+      // element.style.strokeDashoffset = '0';
+    };
+
+    animatePath('.first_name path');
+    animatePath('.last_name path', 10000);
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center mt-2">
+      <div className="flex flex-col items-center justify-center mt-2">
+        {/* First Name */}
+        <svg
+          className="first_name flex items-center justify-center rounded-full w-16 h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 560 288"
+          {...rest}
+          transform="translate(0,-00) scale(3, 3)"
+          fill="transparent"
+        >
+          		<path d="M88.13,81.07c-1.33-3.44-3.5-6.4-6.86-8.07c-1.7-0.85-3.74-1.51-5.66-1.57c-2.03-0.06-3.95,0.68-5.7,1.64
 			c-3.31,1.82-6.71,3.93-9.29,6.71c-1.57,1.69-2.87,3.6-4.22,5.46c-1.33,1.85-2.85,3.54-4.21,5.36c-2.53,3.41-4.64,7.75-4.77,12.07
 			c-0.11,3.59,2.12,5.92,5.71,6.02c4.99,0.14,9.51-2.48,13.89-4.52c4.55-2.12,9.59-3.84,14.68-3.11c1.84,0.26,3.49,0.88,4.63,2.41
 			c0.98,1.32,1.41,2.97,1.64,4.57c0.58,4,0.29,8.23-0.73,12.12c-1.17,4.47-3.38,8.21-6.48,11.6c-0.71,0.78-1.39,1.6-2.11,2.37
@@ -183,6 +215,35 @@
 			c-3.04,5.24-6.03,10.53-9.45,15.54c-3.32,4.86-6.88,9.58-9.81,14.69c-1.27,2.22-2.61,4.55-2.6,7.18c0.01,2.26,0.88,4.73,1.77,6.79
 			c0.5,1.14,1.87,3.27,3.41,2.88c0.91-0.23,2.2-1.02,2.78-1.78c0.81-1.05,1.08-2.53,1.4-3.78c0.47-1.87,1.17-3.65,1.66-5.51
 			c1.5-5.73,2.27-11.66,3.51-17.45c1.45-6.8,2.79-13.54,3.24-20.49c0.45-7.04,2.19-13.93,2.55-20.98
-			C306.91,79.55,305.08,79.85,305.06,80.25L305.06,80.25z"/>
+			C306.91,79.55,305.08,79.85,305.06,80.25L305.06,80.25z"
+        stroke="currentColor"
+            strokeWidth="2"
+          />
+        </svg>
 
-</svg>
+        {/* Last Name */}
+        <svg
+          className="last_name flex items-center justify-center rounded-full w-16 h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 560 288"
+          {...rest}
+          transform="translate(0,-00) scale(3, 3)"
+          fill="transparent"
+        >
+          <path
+            d="M88.13,81.07c-1.33-3.44-3.5-6.4-6.86-8.07c-1.7-0.85-3.74-1.51-5.66-1.57c-2.03-0.06-3.95,0.68-5.7,1.64
+			c-3.31,1.82-6.71,3.93-9.29,6.71c-1.57,1.69-2.87,3.6-4.22,5.46c-1.33,1.85-2.85,3.54-4.21,5.36c-2.53,3.41-4.64,7.75-4.77,12.07
+			c-0.11,3.59,2.12,5.92,5.71,6.02c4.99,0.14,9.51-2.48,13.89-4.52c4.55-2.12,9.59-3.84,14.68-3.11c1.84,0.26,3.49,0.88,4.63,2.41
+			c0.98,1.32,1.41,2.97,1.64,4.57c0.58,4,0.29,8.23-0.73,12.12c-1.17,4.47-3.38,8.21-6.48,11.6c-0.71,0.78-1.39,1.6-2.11,2.37
+			c-0.36,0.39-0.72,0.77-1.11,1.13c-0.19,0.18-0.39,0.36-0.59,0.52c-0.36,0.3-1.07,0.55-0.13,0.27c-1.25,0.39-2.51,1.25-3.7,1.81
+			c-1.27,0.59-2.55,1.16-3.84,1.71c-8.14,3.46-17.11,5.31-25.89,3.26c-2.9-0.68-6.14-2.2-6.44-5.54c-0.34-3.71,2.44-7.48,5-9.87z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+export default SquiggleAnimation;

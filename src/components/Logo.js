@@ -10,7 +10,7 @@ const Logo = () => {
   return (
     <div
      className='flex flex-col items-center justify-center mt-2'>
-        <MotionLink href="/" 
+    <MotionLink href="/" 
     className='flex items-center justify-center rounded-full w-16 h-16  bg-dark text-white dark:border-2 dark:border-solid dark:border-light
     text-2xl font-bold'
     whileHover={{

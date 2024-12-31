@@ -45,12 +45,12 @@ export default function About() {
       </Head>
       <TransitionEffect />
       <main
-        className={`flex  w-full flex-col items-center justify-center dark:text-light`}
+        className={`flex w-full flex-col items-center justify-center dark:text-light`}
       >
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            className="-mt-4 mb-4 !leading-tight !text-6xl"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">

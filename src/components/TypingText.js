@@ -126,7 +126,7 @@ function Type({
   const waitingNextCycle = index === total || index === 0;
 
   return (
-    <div className={("relative font-mono", className)}>
+    <div className={`${className}`}>
       {!grow && <div className="invisible">{text}</div>}
       <div
         className={({
@@ -155,7 +155,7 @@ export default function TypingText({
   repeat = true,
   cursor = <Blinker />,
   delay = 32,
-  className,
+  className = "",
   grow = false,
   alwaysVisibleCount = 1,
   smooth = false,

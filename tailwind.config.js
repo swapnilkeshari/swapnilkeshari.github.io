@@ -1,3 +1,7 @@
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
@@ -24,6 +28,13 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
+        "trail": "trail var(--duration) linear 90s infinite",
+      },
+      keyframes: {
+        "trail": {
+          "0%": { "--angle": "0deg" },
+          "100%": { "--angle": "360deg" },
+        },
       },
       // backgroundImage: {
       //   circularLight:
@@ -66,9 +77,22 @@ module.exports = {
   plugins: [
     // require('@tailwindcss/forms'),
     // require('@tailwindcss/typography'),
-    function ({ addVariant }) {
-      addVariant("child", "& > *");
-      addVariant("child-hover", "& > *:hover");
-    },
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    // function ({ addVariant }) {
+    //   addVariant("child", "& > *");
+    //   addVariant("child-hover", "& > *:hover");
+    // },
   ],
 };
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}

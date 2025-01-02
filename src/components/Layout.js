@@ -1,6 +1,8 @@
 import React from "react";
 
+
 const Layout = ({ children, className = "" }) => {
+  
   return (
     <div
       className={`z-0 inline-block h-full w-full bg-light p-16 dark:bg-dark xl:p-24 lg:p-16 

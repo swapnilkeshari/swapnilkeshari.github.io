@@ -3,12 +3,16 @@ import Head from "next/head";
 import Image from "next/image";
 import profile from "../../public/images/profile/Swapnil_Keshari.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Skills from "@/components/abouts/Skills";
 import Experience from "@/components/abouts/Experience";
-import Education from "@/components/abouts/Education";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
+import { Education } from "@/components/abouts/Education";
+import { ShootingStars } from "@/components/aceternity/shooting-stars";
+import { StarsBackground } from "@/components/aceternity/stars-background";
+import { useThemeSwitch } from "@/components/Hooks/useThemeSwitch";
+
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -34,7 +38,9 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref} />;
 }
 
+
 export default function About() {
+  
   return (
     <>
       <Head>
@@ -47,13 +53,18 @@ export default function About() {
       <main
         className={`flex w-full flex-col items-center justify-center dark:text-light`}
       >
-        <Layout className="pt-16">
+        
+        <Layout className="!pt-16 md:!pt-16 sm:!pt-16">
+        <ShootingStars />
+        <StarsBackground 
+        starDensity = {0.001}
+        />
+        
           <AnimatedText
             text="Passion Fuels Purpose!"
             className="-mt-4 mb-4 !leading-tight !text-6xl"
           />
-
-          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 mt-10">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -111,10 +122,10 @@ export default function About() {
               </div>
             </div>
           </div>
-
+          <Education />
           <Skills />
           <Experience />
-          <Education />
+          
         </Layout>
       </main>
     </>

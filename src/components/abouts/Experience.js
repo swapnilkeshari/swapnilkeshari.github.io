@@ -1,66 +1,76 @@
-import React, { useRef } from "react";
-import {
-  motion,
-  useScroll,
-} from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import LiIcon from "./LiIcon";
 
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ position, company, companyLink, time, address, work, children }) => {
   const ref = useRef(null);
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      setHeight(rect.height);
+    }
+  }, [ref]);
+
   return (
     <li
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]"
     >
-      <LiIcon reference={ref} />
+      <LiIcon reference={ref} height={height}/>
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {position}{" "}
+        
+
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg mb-2">{position} <br/>
+
           <a
-            className="capitalize text-primary dark:text-primaryDark"
+            className="capitalize text-dark/90 font-medium dark:text-light/90"
             href={companyLink}
             target={"_blank"}
           >
             @{company}
           </a>
         </h3>
+
         <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm"> {work}</p>
+        <p className="font-medium w-full md:text-sm mt-2"> {work}</p>
+        {children}
+
       </motion.div>
     </li>
   );
 };
 
 const Experience = () => {
-
   const ref = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"],
+    offset: ["start 0%", "end 50%"],
   });
-
   return (
 
-    <div className="my-64">
+    <div ref={ref} className="my-64">
     <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
       Experience
     </h2>
   
     <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
       <motion.div
-        className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
-          origin-top dark:bg-primaryDark dark:shadow-3xl"
+        className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-transparent 
+        bg-gradient-to-b from-transparent via-red-500 to-yellow-400 from-[30%] via-[70%]
+        dark:bg-gradient-to-t dark:from-purple-500 dark:via-blue-500 dark:to-transparent dark:from-[0%] dark:via-[10%]
+        origin-top"
+
         style={{ scaleY: scrollYProgress }}
       />
-      <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+      <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2 ">
         <Details
           position="Ph.D. Candidate"
           company="University of Pittsburgh and Carnegie Mellon University"
@@ -97,8 +107,8 @@ const Experience = () => {
           work="Developed mechanistic network models to identify key nodes in programmed cell death pathways. Simulated temporal network updates to predict steady-state transition probabilities across large-scale networks."
         />
       </ul>
+      </div>
     </div>
-  </div>
   
     );
 };

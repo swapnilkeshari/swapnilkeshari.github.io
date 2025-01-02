@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
+
+const ThemeContext = createContext();
+
+export function useTheme() {
+  return useContext(ThemeContext);
+}
+
 
 export function useThemeSwitch() {
   const preferDarkQuery = "(prefers-color-scheme: dark)";
   const [mode, setMode] = useState("");
-
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const userPref = window.localStorage.getItem("theme");

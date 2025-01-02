@@ -1,4 +1,5 @@
-import { motion, useScroll } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const LiIcon = ({ reference, time }) => {
   const { scrollYProgress } = useScroll({
@@ -6,23 +7,22 @@ const LiIcon = ({ reference, time }) => {
     offset: ["center end", "center center"],
     layoutEffect: false,
   });
-
   return (
-    <figure className="stroke-dark absolute left-0 dark:stroke-light">
-      <svg className="-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]" width="75" height="75" viewBox="0 0 100 100">
+    <figure className="stroke-red-500 absolute left-0 dark:stroke-purple-500">
+      <svg className="-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]" width="75" height="75" viewBox="0 0 100 100"> 
         <circle
           cx="75"
           cy="50"
           r="20"
           pathLength="1"
-          className="stroke-primary  stroke-1 fill-none dark:stroke-primaryDark"
+          className="stroke-0 fill-light dark:fill-dark"
         />
         <motion.circle
           cx="75"
           cy="50"
           r="20"
           pathLength="1"
-          className="fill-light stroke-[5px] dark:fill-dark"
+          className="fill-transparent stroke-[5px] dark:fill-transparent"
           style={{ pathLength: scrollYProgress }}
         />
         <circle
@@ -30,7 +30,7 @@ const LiIcon = ({ reference, time }) => {
           cy="50"
           r="10"
           pathLength="1"
-          className="animate-pulse stroke-1 fill-primary dark:fill-primaryDark"
+          className="animate-pulse stroke-0 fill-yellow-500 dark:fill-blue-500"
         />
       </svg>
     </figure>

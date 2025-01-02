@@ -17,13 +17,12 @@ export const GithubIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const XIcon = ({ className, fillColor,  ...rest }) => (
+export const XIcon = ({ className, fillColor="currentColor",  ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="256"
     height="256"
     viewBox="0 0 256 256"
-    fillColor="currentColor"
     {...rest}
     className={`w-full h-auto ${className}`}
   >

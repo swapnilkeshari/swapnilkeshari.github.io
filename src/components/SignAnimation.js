@@ -14,10 +14,10 @@ export const SignAnimation = ({className, ...rest}) => {
         xmlns="http://www.w3.org/2000/svg"
         width="560"
         height="288" 
-        viewBox="0 0 560 288"
+        viewBox="0 0 560 10"
         {...rest}
         className={`flex items-center justify-center w-16 h-16 ${className}`}
-        transform="translate(10, 20) scale(5, 05)"
+        transform="translate(5, -50) scale(5, 5)"
       >
         <motion.path
           d="M88.13,81.07c-1.33-3.44-3.5-6.4-6.86-8.07c-1.7-0.85-3.74-1.51-5.66-1.57c-2.03-0.06-3.95,0.68-5.7,1.64

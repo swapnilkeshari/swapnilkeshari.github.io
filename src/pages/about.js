@@ -61,7 +61,7 @@ export default function About() {
         />
         
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text="Brewing genes into networks and chaos"
             className="-mt-4 mb-4 !leading-tight !text-6xl"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 mt-10">

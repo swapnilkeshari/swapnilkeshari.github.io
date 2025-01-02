@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useState, useRef } from "react";
 
 const getRandomStartPoint = () => {
-  const side = Math.floor(Math.random() * 4);
+  const side = Math.floor(Math.random() * 7);
   const offset = Math.random() * window.innerWidth;
 
   switch (side) {
@@ -12,11 +12,17 @@ const getRandomStartPoint = () => {
     case 1:
       return { x: window.innerWidth, y: offset, angle: 135 };
     case 2:
-      return { x: offset, y: window.innerHeight, angle: 225 };
+      return { x: offset, y: window.innerHeight, angle: 139 };
     case 3:
-      return { x: 0, y: offset, angle: 315 };
+      return { x: 0, y: offset, angle: 230 };
+    case 4:
+      return { x: window.innerHeight, y: offset, angle: 30 };
+    case 5:
+      return { x: offset, y: offset, angle: 60 };
+    case 6:
+      return { x: offset, y: offset, angle: 120 };
     default:
-      return { x: 0, y: 0, angle: 45 };
+      return { x: 0, y: 0, angle: 80 };
   }
 };
 export const ShootingStars = ({
@@ -27,7 +33,7 @@ export const ShootingStars = ({
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
   starWidth = 10,
-  starHeight = 1,
+  starHeight = 2,
   className,
 }) => {
   const [star, setStar] = useState(null);

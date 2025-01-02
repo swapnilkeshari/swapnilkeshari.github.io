@@ -42,15 +42,15 @@ export const FlipWords = ({
         transition={{
           type: "spring",
           stiffness: 1000,
-          damping: 10,
+          damping: 100,
         }}
         exit={{
-        //   opacity: 0,
-        //   y: -40,
-        //   x: 40,
-        //   filter: "blur(8px)",
-        //   scale: 2,
-        //   position: "absolute",
+          // opacity: 0,
+          // y: -40,
+          // x: 40,
+          // filter: "blur(8px)",
+          // scale: 2,
+          // position: "absolute",
         }}
         className={cn(
           "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",

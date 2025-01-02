@@ -11,7 +11,7 @@ import { Button } from "@/components/aceternity/moving-border";
 import { FlipWords } from "@/components/aceternity/flip-words";
 import {Sparkles} from "@/components/home/UseSparkles";
 import {useTheme} from "@/components/Hooks/themecontext";
-
+import { ShootingStars } from "@/components/aceternity/shooting-stars";
 
 
 export default function Home() {
@@ -31,9 +31,10 @@ export default function Home() {
       <TransitionEffect />
 
       <Sparkles 
-      particleDensity = {50}
+      particleDensity = {40}
       particleColor = {`${mode === "dark" ? "#FFFFFF" : "#000000"}`} 
       className="absolute -inset-0 -z-0"/>
+      <ShootingStars />
 
       <article className={`flex min-h-screen items-center bg-light/80 dark:bg-dark/80 sm:items-start text-dark dark:text-light `}>
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
@@ -57,7 +58,7 @@ export default function Home() {
               <div
                 className="!text-center !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl text-neutral-600 dark:text-neutral-400">
                 A Dream:
-                <FlipWords words={words} />
+                <FlipWords words={words} duration = {8000} />
               </div>
 
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
@@ -92,7 +93,7 @@ export default function Home() {
 
                 <Button
                   borderRadius = "1rem"
-                  duration={10000}
+                  duration={11000}
                   className={`flex items-center bg-light border-0
                               capitalize text-dark hover:border-dark hover:bg-dark hover:text-light
                               dark:bg-dark dark:text-light dark:hover:border-light dark:hover:bg-light dark:hover:text-dark

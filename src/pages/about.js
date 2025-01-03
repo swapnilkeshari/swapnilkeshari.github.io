@@ -68,7 +68,7 @@ export default function About() {
                 Well, to be precise it's a joint program with Carnegie Mellon University (CPCB).
               </p>
               <p className="my-4 font-medium">
-                I believe, we can learn anythign if we put our mind to it.
+                I believe, we can learn anything if we put our mind to it.
                 Started with love for Physics, Chemistry and Maths - then transitioned to Chemical Engineering -
                 fell in love with biology and slowing getting adept in Computer Science.
                 Life&apos;s short and hence trying whatever I like :P. 

@@ -101,7 +101,7 @@ const Education = () => {
           degree="Schooling"
           time="2002-2016"
           institution="Campion School, Bhopal"
-          info="From where it all began. From where it all began. From where it all began. From where it all began. From where it all began."
+          info="From where it all began."
         />
       </ul>
       </div>

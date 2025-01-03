@@ -8,7 +8,7 @@ const LiIcon = ({ reference, time }) => {
     layoutEffect: false,
   });
   return (
-    <figure className="stroke-red-500 absolute left-0 dark:stroke-purple-500">
+    <figure className="stroke-emerald-500 absolute left-0 dark:stroke-teal-500 ">
       <svg className="-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]" width="75" height="75" viewBox="0 0 100 100"> 
         <circle
           cx="75"
@@ -30,7 +30,7 @@ const LiIcon = ({ reference, time }) => {
           cy="50"
           r="10"
           pathLength="1"
-          className="animate-pulse stroke-0 fill-yellow-500 dark:fill-blue-500"
+          className="animate-pulse stroke-0 fill-fuchsia-800 dark:fill-blue-500"
         />
       </svg>
     </figure>

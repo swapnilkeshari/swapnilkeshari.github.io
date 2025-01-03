@@ -10,11 +10,11 @@ export const StarsBackground = ({
   twinkleProbability = 0.7,
   minTwinkleSpeed = 0.5,
   maxTwinkleSpeed = 1,
+  mode,
   className,
 }) => {
   const [stars, setStars] = useState([]);
-  const canvasRef =
-    useRef(null);
+  const canvasRef = useRef(null);
   const generateStars = useCallback((width, height) => {
     const area = width * height;
     const numStars = Math.floor(area * starDensity);
@@ -86,10 +86,14 @@ export const StarsBackground = ({
 
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const starColor = mode === "dark" ? "255, 255, 255" : "0, 0, 0";
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        ctx.fillStyle = `rgba(${starColor}, ${star.opacity})`;
+        // ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        // const fillStyle = `rgba(${fillColor}, ${star.opacity})`;
+        // ctx.fillStyle = fillStyle;
         ctx.fill();
 
         if (star.twinkleSpeed !== null) {
@@ -104,10 +108,10 @@ export const StarsBackground = ({
 
     render();
 
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [stars]);
+    // return () => {
+    //   cancelAnimationFrame(animationFrameId);
+    // };
+  }, [stars,mode]);
 
   return (
     (<canvas

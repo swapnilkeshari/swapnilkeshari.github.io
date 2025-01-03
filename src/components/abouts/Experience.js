@@ -16,7 +16,7 @@ const Details = ({ position, company, companyLink, time, address, work, children
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[90%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
     >
       <LiIcon reference={ref} height={height}/>
       <motion.div
@@ -25,23 +25,34 @@ const Details = ({ position, company, companyLink, time, address, work, children
         transition={{ duration: 0.5, type: "spring" }}
       >
         
+        <div className="grid grid-cols-2 gap-10 pt-0 items-start">
+            {/* Left Content: Title */}
+            <div className="md:pr-8">
+              <h3 className="text-right capitalize font-bold text-2xl sm:text-xl xs:text-lg  text-dark/50 dark:text-light/50">
+                {position}
+              </h3>
+            </div>
 
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg mb-2">{position} <br/>
-
-          <a
-            className="capitalize text-dark/90 font-medium dark:text-light/90"
-            href={companyLink}
-            target={"_blank"}
-          >
-            @{company}
-          </a>
-        </h3>
-
-        <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
-          {time} | {address}
-        </span>
-        <p className="font-medium w-full md:text-sm mt-2"> {work}</p>
-        {children}
+            {/* Right Content: Other Details */}
+            <div>
+            <a
+                  className="capitalize font-medium"
+                  href={companyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                {company}
+                </a>
+                <br/>
+              <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
+                {time} | {address}
+              </span>
+              <p className="font-medium w-full md:text-sm mt-2">
+                {work}
+              </p>
+              {children}
+            </div>
+          </div>
 
       </motion.div>
     </li>
@@ -52,7 +63,7 @@ const Experience = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0%", "end 50%"],
+    offset: ["start 40%", "end 50%"],
   });
   return (
 
@@ -64,13 +75,13 @@ const Experience = () => {
     <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
       <motion.div
         className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-transparent 
-        bg-gradient-to-b from-transparent via-red-500 to-yellow-400 from-[30%] via-[70%]
+        bg-gradient-to-b from-transparent via-blue-500 to-purple-500 from-[30%] via-[70%]
         dark:bg-gradient-to-t dark:from-purple-500 dark:via-blue-500 dark:to-transparent dark:from-[0%] dark:via-[10%]
-        origin-top"
+        origin-top "
 
         style={{ scaleY: scrollYProgress }}
       />
-      <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2 ">
+      <ul className="w-full flex flex-col items-start justify-between -ml-4 xs:ml-2 ">
         <Details
           position="Ph.D. Candidate"
           company="University of Pittsburgh and Carnegie Mellon University"

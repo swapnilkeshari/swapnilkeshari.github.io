@@ -17,10 +17,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // mont: ["var(--font-mont)", ...fontFamily.sans],
-        // roboto: ['Roboto', 'sans-serif'],
-        playfair: ['"Playfair Display"', 'serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
+        mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       colors: {
         dark: "#1b1b1b",

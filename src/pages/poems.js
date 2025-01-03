@@ -166,10 +166,10 @@ const poems = [
 const PoemsWrapper = ({ img, title, time, summary, link }) => {
 
   return (
-    <li>
+    <li className="">
   <CardContainer className="inter-var">
       <CardBody
-        className="bg-gray-100 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        className="bg-gray-100 relative group/card  hover:shadow-2xl hover:shadow-purple-500/[0.3] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.3] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border ">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white">
@@ -183,25 +183,25 @@ const PoemsWrapper = ({ img, title, time, summary, link }) => {
         </CardItem>
         <CardItem 
           translateZ="100" 
-          className="w-full mt-4"
+          className=" mt-4"
           as="button"
           onClick={() => window.open(link, "_blank")}>
           <Image
             src={img}
-            height="1000"
-            width="1000"
-            className="mt-4 mb-0 h-auto w-full object-cover rounded-xl group-hover/card:shadow-2xl"
+            // height="100"
+            // width="100"
+            className="mt-4 mb-0 rounded-xl group-hover/card:shadow-2xl"
             alt="thumbnail" />
         </CardItem>
         <div className="flex items-center mt-10">
           <CardItem
-            translateZ={20}
+            translateZ="20"
             as="p"
             className="rounded-xl text-xs font-normal dark:text-white">
             {summary}
           </CardItem>
           <CardItem
-            translateZ={20}
+            translateZ="20"
             as="button"
             onClick={() => window.open(link, "_blank")}
             className="px-2 py-2 w-auto h-auto rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-normal">
@@ -236,17 +236,20 @@ export default function Articles() {
           repeat={false}
           delay = {120}
           />
-          <ul className="grid grid-cols-3 gap-x-8 md:grid-cols-2 sm:grid-cols-1">
-            {poems.map((poem) => (
+          <div className="">
+          <ul className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-8">
+            {poems.map((poem,index) => (
                   <PoemsWrapper
                   img={images(`./${poem.imgKey}`)}
                   title={poem.title}
                   time={poem.time}
                   summary={poem.summary}
                   link={poem.link}
+                  className={index === 0 ? "mt-4" : ""}
                 />
             ))}
           </ul>
+          </div>
         </Layout>
       </main>
     </>

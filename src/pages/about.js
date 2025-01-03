@@ -1,18 +1,17 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/Swapnil_Keshari.jpg";
+import Profile from '../../public/images/profile/Asset 1.svg';
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Skills from "@/components/abouts/Skills";
 import Experience from "@/components/abouts/Experience";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
-import { Education } from "@/components/abouts/Education";
+import Education from "@/components/abouts/Education";
 import { ShootingStars } from "@/components/aceternity/shooting-stars";
 import { StarsBackground } from "@/components/aceternity/stars-background";
-import { useThemeSwitch } from "@/components/Hooks/useThemeSwitch";
-
+import {useTheme} from "@/components/Hooks/themecontext";
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -40,84 +39,86 @@ function AnimatedNumberFramerMotion({ value }) {
 
 
 export default function About() {
-  
+  const { mode, setMode } = useTheme();
   return (
     <>
       <Head>
-        <title>About|Swapnil_Keshari</title>
-        <meta name="description" content="Learn more about CodeBucks, a Next.js developer with a passion for 
-        creating innovative solutions. Discover tips for building a developer portfolio and insights on 
-        full-stack development, front-end development, and back-end development." />
+        <title>About | Swapnil_Keshari</title>
+        <meta name="description" content="" />
       </Head>
       <TransitionEffect />
-      <main
-        className={`flex w-full flex-col items-center justify-center dark:text-light`}
-      >
-        
+      
+      <main className={`flex w-full flex-col items-center justify-center dark:text-light`}>
         <Layout className="!pt-16 md:!pt-16 sm:!pt-16">
-        <ShootingStars />
-        <StarsBackground 
-        starDensity = {0.001}
-        />
-        
-          <AnimatedText
-            text="Brewing genes into networks and chaos"
-            className="-mt-4 mb-4 !leading-tight !text-6xl"
-          />
+
+          <ShootingStars />
+          <StarsBackground starDensity = {0.001} mode = {mode} />
+          <AnimatedText text="Causal Variant of Chaos" className="-mt-4 mb-4 !leading-tight !text-6xl" />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 mt-10">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
+                About Me
               </h2>
               <p className="font-medium">
-                Hi, I&apos;m <strong>Swapnil Keshari</strong>, a Ph.D. candidate in Computational Biology at 
-                the CMU-UPitt Joint Program, with a passion for solving complex problems through cutting-edge 
-                technologies. With a solid foundation in machine learning, graph modeling, and data science, 
-                I strive to create scalable and impactful solutions for research and industry challenges.
+                Hi , I&apos;m <strong>Swapnil Keshari</strong>. Welcome to my digital abode!
+                I love learning things, this website is one such example =). 
+                In my free time I like to read, write, code, and play cricket.
+                Professionally, I am a Ph.D. candidate in Computational Biology at University of Pittsburgh.
+                Well, to be precise it's a joint program with Carnegie Mellon University (CPCB).
               </p>
               <p className="my-4 font-medium">
-                I believe innovation is not just about pushing boundaries but also about making solutions 
-                practical and accessible. Whether it&apos;s developing tools like DISCo-Net for large-scale 
-                co-authorship network analysis or analyzing high-dimensional biological data, my work is 
-                driven by curiosity and a desire to make meaningful contributions.
+                I believe, we can learn anythign if we put our mind to it.
+                Started with love for Physics, Chemistry and Maths - then transitioned to Chemical Engineering -
+                fell in love with biology and slowing getting adept in Computer Science.
+                Life&apos;s short and hence trying whatever I like :P. 
               </p>
-              <p className="font-medium">
-                Beyond academics, I&apos;m an active leader and mentor, having organized initiatives for 
-                student advocacy and alumni networks. My diverse interests include digital design, poetry, 
-                aviation, and cricket, which keep me balanced and creatively inspired. I look forward to 
-                applying my skills, experiences, and passion to transformative projects that make a difference.
+              <p className="my-4 font-medium">
+                Beyond academics, I like to read books, write poems and fly planes. While, my friends will describe
+                me as a couch potato, I like to think of myself as a wanderer.
+                I love to chat with people, so feel free to reach out to me for anything.
+                
+              </p>
+              <p className="my-4 font-medium">
+              And the craziest thing I&apos;ve done is to swim 12 km in 9 hours!
               </p>
 
             </div>
-            <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
-            bg-light p-8 dark:border-light dark:bg-dark
+            <div className="relative col-span-3 h-max rounded-2xl border-2 border-double border-dark 
+            bg-light p-8 dark:border-light dark:bg-light/70 fill-white
             xl:col-span-4 md:col-span-8 md:order-1
             ">
-              <div
-                className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
-                bg-dark
-        dark:bg-light  "
-              />
-              <Image
-                className="h-auto w-full rounded-2xl"
-                src={profile}
-                alt="Swapnil_Keshari_Profile_Picture"
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-                priority
-              />
+                  <div>
+                    <Profile className="fill-dark"/>
+                  </div>
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row 
             xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={4} />+
+                  <AnimatedNumberFramerMotion value={22} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
                 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Years of experience
+                  Years of Homeworks  
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                  <AnimatedNumberFramerMotion value={70} />+
+                </span>
+                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
+                xl:text-center md:text-lg sm:text-base xs:text-sm">
+                  hrs. of flight time
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                  <AnimatedNumberFramerMotion value={1} />
+                </span>
+                <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75 
+                xl:text-center md:text-lg sm:text-base xs:text-sm">
+                  paper published
                 </h2>
               </div>
             </div>

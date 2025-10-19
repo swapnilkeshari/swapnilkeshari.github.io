@@ -74,7 +74,7 @@ const Navbar = () => {
           <CustomLink className="mx-4" href="/poems" title="Poems" />
           <StaggeredCard className="ml-2"
             links={[
-                    { href: '/404', label: 'Aviation'},
+                    { href: '/aviation', label: 'Aviation'},
                     { href: '/404', label: 'Art'},
                   ]}
           />

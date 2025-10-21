@@ -20,6 +20,9 @@ export default function Aviation() {
               <p><strong>License:</strong> PPL (Part 61)</p>
               <p><strong>Check Ride:</strong> October 13, 2025</p>
               <p><strong>DPE:</strong> Lester Zook</p>
+              <p><strong>Aircraft:</strong> Piper Warrior 151</p>
+              <p><strong>Registration:</strong> N40925</p>
+              <p><strong>Instructor:</strong> Xavier Sasala, CFII</p>
               <p><strong>Airport:</strong> KBTP @ Runway 08</p>
             </div>
           </div>
@@ -71,41 +74,15 @@ export default function Aviation() {
               </div>
             </div>
 
-            {/* Cross-Country and Route Planning */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-600 dark:text-purple-400">c. Cross-Country and Route Planning</h3>
-              <div className="space-y-4 ml-4">
-                <div className="ml-4">
-                  <p><strong>DPE:</strong> Tell me about your planned route. Why are you flying over the lake?</p>
-                  <p className="ml-8"><strong>Me:</strong> I planned it that way for efficiency, but I shouldn't fly directly over the lake — there are no suitable emergency landing areas, limited visual cues, and it's generally riskier.</p>
-                </div>
-                <div className="ml-4">
-                  <p><strong>DPE:</strong> Is it legal to fly over the lake?</p>
-                  <p className="ml-8"><strong>Me:</strong> Yes, it's legal, but not advisable for the reasons above. I would not do it since I don't think it is safe.</p>
-                </div>
-                <div className="ml-4">
-                  <p><strong>DPE:</strong> What altitude are you planning to cruise at?</p>
-                  <p className="ml-8"><strong>Me:</strong> 9,500 ft.</p>
-                  <div className="ml-8">
-                    <p className="ml-4"><strong>DPE:</strong> Why 9,500 ft?</p>
-                    <p className="ml-4"><strong>Me:</strong></p>
-                    <ul className="ml-8 mt-2 space-y-1 text-sm">
-                      <li>i. It offers good gliding distance in case of an emergency.</li>
-                      <li>ii. It's most economical with tailwinds favoring that altitude.</li>
-                      <li>iii. Eastbound flight → odd + 500 ft rule.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Pilot and Aircraft Knowledge */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-4 text-orange-600 dark:text-orange-400">d. Pilot and Aircraft Knowledge</h3>
               <div className="space-y-4 text-sm ml-4">
                 <div className="ml-4">
                   <p><strong>DPE:</strong> What are the alcohol restrictions for pilots?</p>
-                  <p className="ml-8"><strong>Me:</strong> No flying within 8 hours of drinking, and not with a BAC ≥ 0.04%.</p>
+                  <p className="ml-8"><strong>Me:</strong> I am not sure and don't remember the number. But I don't drink anyway so wouldn't matter less to me.</p>
+                  <p className="ml-8"><strong>DPE:</strong> What if someone drinks a night before. Can they fly?</p>
+                  <p className="ml-8"><strong>Me:</strong> I am not sure of the requirements</p>
                 </div>
                 <div className="ml-4">
                   <p><strong>DPE:</strong> Tell me about the electrical system.</p>
@@ -145,17 +122,30 @@ export default function Aviation() {
               </div>
             </div>
 
-            {/* In-Flight Scenarios */}
+            {/* Cross-Country and Route Planning */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-red-600 dark:text-red-400">e. In-Flight Scenarios</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-purple-600 dark:text-purple-400">c. Cross-Country and Route Planning</h3>
               <div className="space-y-4 ml-4">
                 <div className="ml-4">
-                  <p><strong>DPE:</strong> What would you do if a passenger becomes sick?</p>
-                  <p className="ml-8"><strong>Me:</strong> Make them comfortable, maintain control, and consider landing if needed.</p>
+                  <p><strong>DPE:</strong> Tell me about your planned route. Why are you flying over the lake?</p>
+                  <p className="ml-8"><strong>Me:</strong> I planned it that way for efficiency, but I shouldn't fly directly over the lake — there are no suitable emergency landing areas, limited visual cues, and it's generally riskier.</p>
                 </div>
                 <div className="ml-4">
-                  <p><strong>DPE:</strong> What if everyone — including you — starts feeling unwell?</p>
-                  <p className="ml-8"><strong>Me:</strong> Land as soon as safely possible; it could indicate hypoxia or carbon monoxide in the cabin, so land ASAP.</p>
+                  <p><strong>DPE:</strong> Is it legal to fly over the lake?</p>
+                  <p className="ml-8"><strong>Me:</strong> Yes, it's legal, but not advisable for the reasons above. I would not do it since I don't think it is safe.</p>
+                </div>
+                <div className="ml-4">
+                  <p><strong>DPE:</strong> What altitude are you planning to cruise at?</p>
+                  <p className="ml-8"><strong>Me:</strong> 9,500 ft.</p>
+                  <div className="ml-8">
+                    <p className="ml-4"><strong>DPE:</strong> Why 9,500 ft?</p>
+                    <p className="ml-4"><strong>Me:</strong></p>
+                    <ul className="ml-8 mt-2 space-y-1 text-sm">
+                      <li>i. It offers good gliding distance in case of an emergency.</li>
+                      <li>ii. It's most economical with tailwinds favoring that altitude.</li>
+                      <li>iii. Eastbound flight → odd + 500 ft rule.</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,6 +183,21 @@ export default function Aviation() {
               </div>
             </div>
 
+            {/* In-Flight Scenarios */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 text-red-600 dark:text-red-400">e. In-Flight Scenarios</h3>
+              <div className="space-y-4 ml-4">
+                <div className="ml-4">
+                  <p><strong>DPE:</strong> What would you do if a passenger becomes sick?</p>
+                  <p className="ml-8"><strong>Me:</strong> Make them comfortable, maintain control, and consider landing if needed.</p>
+                </div>
+                <div className="ml-4">
+                  <p><strong>DPE:</strong> What if everyone — including you — starts feeling unwell?</p>
+                  <p className="ml-8"><strong>Me:</strong> Land as soon as safely possible; it could indicate hypoxia or carbon monoxide in the cabin, so land ASAP.</p>
+                </div>
+              </div>
+            </div>
+
             {/* Topics Not Covered */}
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-4 text-gray-600 dark:text-gray-400">g. Topics Not Covered</h3>
@@ -223,7 +228,6 @@ export default function Aviation() {
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-6 text-primary dark:text-primaryDark">3. Practical Flight Time: 1.6 Hours</h2>
             
-            {/* Flight sections would continue here with similar formatting... */}
             <div className="space-y-8 text-sm">
               <div>
                 <h3 className="text-xl font-semibold mb-3 text-cyan-600 dark:text-cyan-400">a. Runup and Initial Procedures</h3>

@@ -75,7 +75,8 @@ const Navbar = () => {
           <StaggeredCard className="ml-2"
             links={[
                     { href: '/aviation', label: 'Aviation'},
-                    { href: '/404', label: 'Art'},
+                    { href: '/news', label: 'News'},
+                    { href: '/art', label: 'Art'},
                   ]}
           />
         </nav>

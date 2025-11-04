@@ -1,12 +1,15 @@
 import Head from "next/head";
+import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "@/components/AnimatedText";
 
 export default function Aviation() {
   return (
     <>
       <Head>
-        <title>PPL Checkride Experience - Swapnil Keshari</title>
+        <title>Aviation | Swapnil_Keshari</title>
         <meta name="description" content="Private Pilot License Checkride Experience by Swapnil Keshari" />
       </Head>
+      <TransitionEffect />
       <main
         className={`w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden`}
       >

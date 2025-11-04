@@ -1,6 +1,9 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "@/components/AnimatedText";
 
 // Example data structure
 const artsContent = [
@@ -9,7 +12,7 @@ const artsContent = [
     title: "Abstract Art",
     date: "April 30, 2020",
     description: "Just random musings",
-    src: "/public/art/circle_from_line.jpg",
+    src: "/art/circle_from_line.jpg",
     alt: "Abstract Art"
   },
 {
@@ -17,7 +20,7 @@ const artsContent = [
     title: "Frenemies",
     date: "March 23, 2020",
     description: "Best Friends Forever",
-    src: "/public/art/frenemies.jpg",
+    src: "/art/frenemies.jpg",
     alt: "Frenemies"
   },
   {
@@ -25,7 +28,7 @@ const artsContent = [
     title: "Dream",
     date: "March 23, 2020",
     description: "A Dream",
-    src: "/public/art/i_am_a_dream.jpg",
+    src: "/art/i_am_a_dream.jpg",
     alt: "Dream"
   },
   {
@@ -49,10 +52,13 @@ export default function ArtsPage() {
   return (
     <>
       <Head>
-        <title>Arts Gallery - Swapnil Keshari</title>
+        <title>Arts Gallery | Swapnil_Keshari</title>
         <meta name="description" content="Artworks, interviews, and videos by Swapnil Keshari" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
+        <AnimatedText text="Causal Variant of Chaos" className="-mt-4 mb-4 !leading-tight !text-6xl" />
+
         <div className="w-full max-w-6xl px-8">
           <h1 className="text-4xl font-bold text-center pt-16 mb-8">Arts Gallery</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
